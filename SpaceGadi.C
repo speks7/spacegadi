@@ -10,6 +10,7 @@ long int score=0;
 
 void load();
 void boarder();
+void over(long int);
 
 void main(){
 
@@ -29,9 +30,45 @@ void main(){
     m=i;
     while(1){
 
+        h++;
+        if(c%20==0) //for first object system
+	    {
+		    i=i+1;
+		    z=rand()%16;
+		    if(z%3==0)
+		    {
+			    cor1[i][0]=156;
+			    cor1[i][1]=25;
+		    }
+		    else
+		    {
+			    cor1[i][0]=251;
+			    cor1[i][1]=25;
+		    }
+	    }
+        for(j=i-8;j<=i;j++)
+	    {
+		    if(cor1[j][0]!=0)
+		    {
+			    if(cor1[j][0]==x1&&cor1[j][1]>y1&&y1+40>=cor1[j][1])
+			        goto label;
+			    if(cor1[j][1]>25)
+				    objclr(cor1[j][0],cor1[j][1]-5);
+			    if(cor1[j][1]+20>=418)
+			    {
+				    score++;
+				    objclr(cor1[j][0],cor1[j][1]-5);
+				    cor1[j][0]=0;
+				    continue;
+			    }
+			    obj1(cor1[j][0],cor1[j][1]);
+			    cor1[j][1]=cor1[j][1]+5;
+		    }
+	    }
 
 
     }
+    label: over(score);
 }
 
 void load(){
