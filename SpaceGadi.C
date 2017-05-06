@@ -27,5 +27,11 @@ void load(){
     textcolor(BLACK); //background color
     moveto(200,180); //loading process
     outtext("Loading, please wait........");
+    for(i=0;i<600;i+=2)
+    {
+        setcolor(3); //loading bar color
+        line(20,380,i+39,380);
+        delay (10);
+    }
 
 }
