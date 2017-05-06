@@ -14,5 +14,6 @@ void main(){
     int gm,h=1,i,j,z,m,d;
     long int c=1;char q;
     float n=40;
+    initgraph(&gd,&gm,"C:\\TC3\\BGI");
 
 }
