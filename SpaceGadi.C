@@ -13,6 +13,7 @@ void boarder();
 void over(long int);
 void gadidai(int,int);
 void gadivai(int,int);
+void printscore(long int);
 
 void main(){
 
@@ -140,6 +141,9 @@ void main(){
 	    }
         gadivai(x1,y1);
 	    gadidai(x2,y2);
+        printscore(score);
+        
+    }
     label: over(score);
     while(1)
     {
@@ -224,4 +228,18 @@ void gadidai(int cx,int cy)
     rectangle(1,0,37,40);
     setfillstyle(8,1);
     floodfill(5,4,3);
+}
+
+void printscore(long int a)
+{
+    char output[40];
+    setviewport(525,180,610,240,1);
+    clearviewport();
+    setviewport(530,185,610,235,1);
+    setfillstyle(1,15);
+    floodfill(2,2,3);
+    setcolor(4);
+    outtextxy(20,4,"score");
+    sprintf(output,"%Ld",a);
+    outtextxy(33,25,output);
 }
