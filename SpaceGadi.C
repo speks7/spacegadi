@@ -18,6 +18,7 @@ void obj1(int,int);
 void obj2(int ,int);
 void objclr(int,int);
 void gadiclr(int,int);
+char esc();
 
 void main(){
 
@@ -279,4 +280,32 @@ void gadiclr(int cx,int cy)
 {
     setviewport(cx,cy,cx+39,cy+40,1);
     clearviewport();
+}
+
+char esc()
+{
+    char c;
+    while(1)
+    {
+        setviewport(200,200,420,279,1);
+        setcolor(4);
+        rectangle(0,0,220,79);
+        rectangle(1,1,219,78);
+        rectangle(2,2,218,77);
+        setfillstyle(1,9);
+        floodfill(10,10,4);
+        outtextxy(75,4,"REALLT WANT TO EXIT ?");
+        outtextxy(87,20,"Y      N");
+        if(kbhit()!=0)
+        {
+            c=getch();
+            if(c=='y'||c=='n')
+            {
+                clearviewport();
+                setviewport(201,201,421,280,1);
+                clearviewport();
+                return c;
+            }
+        }
+    }
 }
