@@ -65,10 +65,51 @@ void main(){
 			    cor1[j][1]=cor1[j][1]+5;
 		    }
 	    }
-
+        if(c%20==0) //for second object system
+	    {
+		    m=m+1;
+		    z=rand()%16;
+		    if(z%3==0)
+		    {
+			    cor2[m][0]=444;
+			    cor2[m][1]=25;
+		    }
+		    else
+		    {
+			    cor2[m][0]=349;
+			    cor2[m][1]=25;
+		    }
+	    }
+        for(j=m-8;j<=m;j++)
+	    {
+		    if(cor2[j][0]!=0)
+		    {
+			    if(cor2[j][0]==x2&&cor2[j][1]>y2&&y2+40>=cor2[j][1])
+				    goto label;
+			    if(cor2[j][1]>25)
+				    objclr(cor2[j][0],cor2[j][1]-5);
+			    if(cor2[j][1]+25>=418)
+			    {
+				    score++;
+				    objclr(cor2[j][0],cor2[j][1]-5);
+				    cor2[j][0]=0;
+				    continue;
+			    }
+			    obj2(cor2[j][0],cor2[j][1]);
+			    cor2[j][1]=cor2[j][1]+5;
+		    }
+	    }
 
     }
     label: over(score);
+    while(1)
+    {
+	    if(kbhit()!=0)
+	    q=getch();
+	    if(q==27)
+		    exit();
+	    delay(200);
+    }
 }
 
 void load(){
@@ -108,4 +149,22 @@ void boarder(){
     rectangle(223,23,223,417);//left line
     rectangle(416,23,416,417);//right line
 
+}
+
+void over(long int a)
+{
+    char output[20];
+    nosound();
+    setviewport(200,200,420,279,1);
+    setcolor(4);
+    rectangle(0,0,220,79);
+    rectangle(1,1,219,78);
+    rectangle(2,2,218,77);
+    setfillstyle(1,9);
+    floodfill(10,10,4);
+    outtextxy(75,4,"GAME OVER");
+    outtextxy(87,20,"score");
+    sprintf(output,"%Ld",a);
+    outtextxy(100,40,output);
+    outtextxy(45,55,"press esc to exit");
 }
