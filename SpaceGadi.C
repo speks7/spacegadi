@@ -18,11 +18,14 @@ void main(){
     float n=40;
     initgraph(&gd,&gm,"C:\\TC3\\BGI");
     load();
-    
+
 }
 
 void load(){
 
-
+    int i;
+    textcolor(BLACK); //background color
+    moveto(200,180); //loading process
+    outtext("Loading, please wait........");
 
 }
