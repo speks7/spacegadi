@@ -25,8 +25,13 @@ void main(){
         cor1[i][0]=0;
         cor2[i][0]=0;
     }
+    i=i-1;
+    m=i;
+    while(1){
 
+        
 
+    }
 }
 
 void load(){
