@@ -10,4 +10,9 @@ long int score=0;
 
 void main(){
 
+    int gd=DETECT;
+    int gm,h=1,i,j,z,m,d;
+    long int c=1;char q;
+    float n=40;
+
 }
