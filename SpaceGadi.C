@@ -14,6 +14,10 @@ void over(long int);
 void gadidai(int,int);
 void gadivai(int,int);
 void printscore(long int);
+void obj1(int,int);
+void obj2(int ,int);
+void objclr(int,int);
+void gadiclr(int,int);
 
 void main(){
 
@@ -245,4 +249,34 @@ void printscore(long int a)
     outtextxy(20,4,"score");
     sprintf(output,"%Ld",a);
     outtextxy(33,25,output);
+}
+
+void obj1(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+20,1);
+    setcolor(14);
+    rectangle(0,0,39,20);
+    setfillstyle(8,4);
+    floodfill(10,10,14);
+}
+
+void obj2(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+20,1);
+    setcolor(3);
+    rectangle(0,0,39,20);
+    setfillstyle(8,4);
+    floodfill(10,10,3);
+}
+
+void objclr(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+20,1);
+    clearviewport();
+}
+
+void gadiclr(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+40,1);
+    clearviewport();
 }
