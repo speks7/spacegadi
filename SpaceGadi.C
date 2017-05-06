@@ -3,21 +3,21 @@
 #include<graphics.h>
 #include<dos.h>
 
-int cor1[400][2];
-int cor2[400][2];
-int x1=156,y1=340,x2=349,y2=340;
+int cor1[400][2]; //coordinates
+int cor2[400][2]; //coordinates
+int x1=156,y1=340,x2=349,y2=340; //interface dimension
 long int score=0;
 
-void load();
-void boarder();
-void over(long int);
-void gadidai(int,int);
-void gadivai(int,int);
-void printscore(long int);
-void obj1(int,int);
-void obj2(int ,int);
-void objclr(int,int);
-void gadiclr(int,int);
+void load(); //loading screen
+void boarder(); //border design
+void over(long int); //game over screen
+void gadidai(int,int); //1st Car layout
+void gadivai(int,int); //2nd Car Layout
+void printscore(long int); //Score
+void obj1(int,int); //1st Object Layout
+void obj2(int ,int); //2nd Object Layout
+void objclr(int,int); //Reconfig 1st Object Layout
+void gadiclr(int,int); //Reconfig 2nd Object Layout
 char esc();
 
 void main(){
@@ -26,7 +26,7 @@ void main(){
     int gm,h=1,i,j,z,m,d;
     long int c=1;char q;
     float n=40;
-    initgraph(&gd,&gm,"C:\\TC3\\BGI");
+    initgraph(&gd,&gm,"C:\\TC3\\BGI"); // Borland Location Setup
     load();
     boarder();
     for(i=0;i<10;i++)
@@ -36,7 +36,7 @@ void main(){
     }
     i=i-1;
     m=i;
-    while(1){
+    while(1){ //Continuous flowing of objects
 
         h++;
         label2:
@@ -59,10 +59,10 @@ void main(){
 	    {
 		    if(cor1[j][0]!=0)
 		    {
-			    if(cor1[j][0]==x1&&cor1[j][1]>y1&&y1+40>=cor1[j][1])
+			    if(cor1[j][0]==x1&&cor1[j][1]>y1&&y1+40>=cor1[j][1]) //Crash to the object
 			        goto label;
 			    if(cor1[j][1]>25)
-				    objclr(cor1[j][0],cor1[j][1]-5);
+				    objclr(cor1[j][0],cor1[j][1]-5); //Reconfig after object reach end cordinate
 			    if(cor1[j][1]+20>=418)
 			    {
 				    score++;
@@ -109,7 +109,7 @@ void main(){
 		    }
 	    }
         nosound();
-        if(kbhit()!=0)
+        if(kbhit()!=0) //Movement of the Cars as Kbhit determines if key is pressed or not
 	    {
 		    q=getch();
 		    if(q=='a')
@@ -132,7 +132,7 @@ void main(){
 		    }
 		    else if (q==27)
 		    {
-			    q=esc();
+			    q=esc(); // Esc Funtion load when pressed esc button 
 			    if(q=='y')
 				    exit();
 			    else
@@ -152,11 +152,12 @@ void main(){
 	    d=n;
 	    delay(d);
     }
-    label: over(score);
-    while(1)
+    label: 
+    over(score); //Game over Screen
+    while(1) //Restarting Game
     {
 	    if(kbhit()!=0)
-	    q=getch();
+	        q=getch();
 	    if(q==27)
 		    exit();
 	    delay(200);
