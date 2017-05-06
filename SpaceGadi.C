@@ -8,6 +8,8 @@ int cor2[400][2];
 int x1=156,y1=340,x2=349,y2=340;
 long int score=0;
 
+void load();
+
 void main(){
 
     int gd=DETECT;
@@ -15,5 +17,12 @@ void main(){
     long int c=1;char q;
     float n=40;
     initgraph(&gd,&gm,"C:\\TC3\\BGI");
+    load();
+    
+}
+
+void load(){
+
+
 
 }
