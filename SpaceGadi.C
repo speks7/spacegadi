@@ -11,6 +11,8 @@ long int score=0;
 void load();
 void boarder();
 void over(long int);
+void gadidai(int,int);
+void gadivai(int,int);
 
 void main(){
 
@@ -31,6 +33,7 @@ void main(){
     while(1){
 
         h++;
+        label2:
         if(c%20==0) //for first object system
 	    {
 		    i=i+1;
@@ -135,7 +138,8 @@ void main(){
 			    }
 		    }
 	    }
-    
+        gadivai(x1,y1);
+	    gadidai(x2,y2);
     label: over(score);
     while(1)
     {
@@ -202,4 +206,22 @@ void over(long int a)
     sprintf(output,"%Ld",a);
     outtextxy(100,40,output);
     outtextxy(45,55,"press esc to exit");
+}
+
+void gadivai(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+40,1);
+    setcolor(14);
+    rectangle(1,0,37,40);
+    setfillstyle(8,1);
+    floodfill(5,4,14);
+}
+
+void gadidai(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+40,1);
+    setcolor(3);
+    rectangle(1,0,37,40);
+    setfillstyle(8,1);
+    floodfill(5,4,3);
 }
