@@ -45,4 +45,19 @@ void load(){
 
 void boarder(){
 
+    setcolor(14);
+    rectangle(126,20,513,420);
+    setcolor(2);
+    rectangle(127,21,512,419);
+    setcolor(14);
+    rectangle(128,22,511,418);//small
+    setcolor(14);
+    rectangle(318,23,321,417);//middle
+    setfillstyle(1,2);
+    floodfill(320,100,14); //outer
+    setfillstyle(1,1);
+    floodfill(50,20,14);22
+    rectangle(223,23,223,417);//left line
+    rectangle(416,23,416,417);//right line
+
 }
