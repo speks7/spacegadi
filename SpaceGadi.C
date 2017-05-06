@@ -33,5 +33,10 @@ void load(){
         line(20,380,i+39,380);
         delay (10);
     }
+    setcolor(WHITE);
+    moveto(240,200);
+    outtext("Loading Completed!"); //loading
+    delay(1000);
+    clrscr();
 
 }
