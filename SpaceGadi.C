@@ -142,7 +142,10 @@ void main(){
         gadivai(x1,y1);
 	    gadidai(x2,y2);
         printscore(score);
-        
+        c++;
+	    n=n-0.01;
+	    d=n;
+	    delay(d);
     }
     label: over(score);
     while(1)
