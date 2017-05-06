@@ -20,6 +20,12 @@ void main(){
     initgraph(&gd,&gm,"C:\\TC3\\BGI");
     load();
     boarder();
+    for(i=0;i<10;i++)
+    {
+        cor1[i][0]=0;
+        cor2[i][0]=0;
+    }
+
 
 }
 
