@@ -29,7 +29,7 @@ void main(){
     m=i;
     while(1){
 
-        
+
 
     }
 }
@@ -67,7 +67,7 @@ void boarder(){
     setfillstyle(1,2);
     floodfill(320,100,14); //outer
     setfillstyle(1,1);
-    floodfill(50,20,14);22
+    floodfill(50,20,14);
     rectangle(223,23,223,417);//left line
     rectangle(416,23,416,417);//right line
 
