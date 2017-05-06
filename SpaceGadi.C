@@ -9,6 +9,7 @@ int x1=156,y1=340,x2=349,y2=340;
 long int score=0;
 
 void load();
+void boarder();
 
 void main(){
 
@@ -18,6 +19,7 @@ void main(){
     float n=40;
     initgraph(&gd,&gm,"C:\\TC3\\BGI");
     load();
+    boarder();
 
 }
 
@@ -38,5 +40,9 @@ void load(){
     outtext("Loading Completed!"); //loading
     delay(1000);
     clrscr();
+
+}
+
+void boarder(){
 
 }
