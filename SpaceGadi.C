@@ -99,8 +99,43 @@ void main(){
 			    cor2[j][1]=cor2[j][1]+5;
 		    }
 	    }
-
-    }
+        nosound();
+        if(kbhit()!=0)
+	    {
+		    q=getch();
+		    if(q=='a')
+		    {
+			    sound(800);
+			    gadiclr(x1,y1);
+			    if(x1==156)
+				    x1=251;
+			    else
+				    x1=156;
+		    }
+		    else if(q=='l')
+		    {
+			    sound(2000);
+			    gadiclr(x2,y2);
+			    if(x2==349)
+				    x2=444;
+			    else
+				    x2=349;
+		    }
+		    else if (q==27)
+		    {
+			    q=esc();
+			    if(q=='y')
+				    exit();
+			    else
+			    {
+				    clearviewport();
+				    setviewport(0,0,639,479,1);
+				    boarder();
+				    goto label2;
+			    }
+		    }
+	    }
+    
     label: over(score);
     while(1)
     {
