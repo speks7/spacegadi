@@ -11,7 +11,7 @@ long int score=0;
 void load(); //loading screen
 void boarder(); //border design
 void over(long int); //game over screen
-void gadidai(int,int); //1st Car layout
+void onecarlayout(int,int); //1st Car layout
 void gadivai(int,int); //2nd Car Layout
 void printscore(long int); //Score
 void obj1(int,int); //1st Object Layout
@@ -145,7 +145,7 @@ void main(){
 		    }
 	    }
         gadivai(x1,y1);
-	    gadidai(x2,y2);
+	    onecarlayout(x2,y2);
         printscore(score);
         c++;
 	    n=n-0.01;
@@ -230,7 +230,7 @@ void gadivai(int cx,int cy)
     floodfill(5,4,14);
 }
 
-void gadidai(int cx,int cy)
+void onecarlayout(int cx,int cy)
 {
     setviewport(cx,cy,cx+39,cy+40,1);
     setcolor(3);
