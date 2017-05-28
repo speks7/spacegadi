@@ -5,12 +5,12 @@ The project has graphics.h header file using Borland Graphics Interface thus mig
 It is the derived version of original project reconfigured for the easier usage.
 
 # Usage:
-Not a Time Based but a kbhit based movement of the Cars ie. jumping from particular cordinates to other after pressing a specified Key but only left or right direction. The Obstacles will flow to bottom continuously but not in random fashion ie. will reapt it's pattern. 
+Not a Time Based but a kbhit based movement of the Cars ie. jumping from particular cordinates to other after pressing a specified Key but only left or right direction. The Obstacles will flow to bottom continuously but not in random fashion ie. will repeat it's pattern. 
 
 # Contributors:
 
-Sunim Acharya: aryaminus.wordpress.com
+Suzan Poudel(https://fb.com/p.suzzu): The Main Coding Guy 
 
-Suzan Poudel: fb.com/p.suzzu
+Sunim Acharya(https://aryaminus.wordpress.com): The Brainstorming Guy
 
-Saragam Subedi: fb.com/saragam111
+Saragam Subedi(https://fb.com/saragam111): The Tabulating Guy
