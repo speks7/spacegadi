@@ -12,12 +12,12 @@ void load(); //loading screen
 void boarder(); //border design
 void over(long int); //game over screen
 void onecarlayout(int,int); //1st Car layout
-void gadivai(int,int); //2nd Car Layout
+void twocarlayout(int,int); //2nd Car Layout
 void printscore(long int); //Score
 void obj1(int,int); //1st Object Layout
 void obj2(int ,int); //2nd Object Layout
-void objclr(int,int); //Reconfig 1st Object Layout
-void gadiclr(int,int); //Reconfig 2nd Object Layout
+void objclr(int,int); //Reconfig Object Layout
+void carclr(int,int); //Reconfig Car Layout
 char esc();
 
 void main(){
@@ -115,7 +115,7 @@ void main(){
 		    if(q=='a')
 		    {
 			    sound(800);
-			    gadiclr(x1,y1);
+			    carclr(x1,y1);
 			    if(x1==156)
 				    x1=251;
 			    else
@@ -124,7 +124,7 @@ void main(){
 		    else if(q=='l')
 		    {
 			    sound(2000);
-			    gadiclr(x2,y2);
+			    carclr(x2,y2);
 			    if(x2==349)
 				    x2=444;
 			    else
@@ -144,7 +144,7 @@ void main(){
 			    }
 		    }
 	    }
-        gadivai(x1,y1);
+        twocarlayout(x1,y1);
 	    onecarlayout(x2,y2);
         printscore(score);
         c++;
@@ -221,7 +221,7 @@ void over(long int a)
     outtextxy(45,55,"press esc to exit");
 }
 
-void gadivai(int cx,int cy)
+void twocarlayout(int cx,int cy)
 {
     setviewport(cx,cy,cx+39,cy+40,1);
     setcolor(14);
