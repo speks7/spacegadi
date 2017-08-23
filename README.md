@@ -9,8 +9,8 @@ Not a Time Based but a kbhit based movement of the Cars ie. jumping from particu
 
 # Contributors:
 
-[Suzan Poudel](https://fb.com/p.suzzu): The Main Coding Guy 
+[Suzan Poudel](https://www.linkedin.com/in/psujan/): The Main Coding Guy 
 
 [Sunim Acharya](https://aryaminus.wordpress.com): The Brainstorming Guy
 
-[Saragam Subedi](https://fb.com/saragam111): The Tabulating Guy
+[Saragam Subedi](https://www.linkedin.com/in/saragam-subedi-4b2743121/): The Tabulating Guy
