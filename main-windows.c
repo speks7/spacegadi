@@ -277,7 +277,7 @@ void objclr(int cx,int cy)
     clearviewport();
 }
 
-void gadiclr(int cx,int cy)
+void carclr(int cx,int cy)
 {
     setviewport(cx,cy,cx+39,cy+40,1);
     clearviewport();
@@ -309,10 +309,4 @@ char esc()
             }
         }
     }
-}
-
-void carclr(int cx,int cy)
-{
-    setviewport(cx,cy,cx+39,cy+40,1);
-    clearviewport();
 }
