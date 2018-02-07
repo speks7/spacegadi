@@ -310,3 +310,9 @@ char esc()
         }
     }
 }
+
+void carclr(int cx,int cy)
+{
+    setviewport(cx,cy,cx+39,cy+40,1);
+    clearviewport();
+}
